@@ -74,7 +74,8 @@
         "ms-azuretools.vscode-docker",
         "ms-vsliveshare.vsliveshare",
         "visualstudioexptteam.vscodeintellicode",
-        "ms-vscode.go"
+        "ms-vscode.go",
+        "formulahendry.code-runner"
       ]
     }
   }
