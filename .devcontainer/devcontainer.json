@@ -1,0 +1,70 @@
+{
+  "name": "C2C - GO",
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "image": "mcr.microsoft.com/devcontainers/go", // pinning a OS version
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
+      "plugins": "gitfast git-extras command-not-found colorize colored-man-pages"
+    },
+    "ghcr.io/devcontainers-contrib/features/bin:1": {} // for any binary release installation
+  },
+  // set container specific settings
+  "customizations": {
+   "vscode": {
+    "settings": {
+        "[markdown]": {
+            "editor.formatOnSave": true,
+            "editor.formatOnSaveMode": "modificationsIfAvailable",
+            "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+          },
+          // This Glob should be the same as .github/workflows/linter.yaml Markdownlint
+          "markdownlint.lintWorkspaceGlobs": [
+            "!**/.git",
+            "!**/.github/",
+            "!CHANGELOG.md",
+            "!CONTRIBUTING.md",
+            "!LICENSE"
+          ],
+          "terminal.integrated.defaultProfile.linux": "zsh",
+          "editor.inlineSuggest.enabled": true,
+          "editor.copyWithSyntaxHighlighting": false,
+          "editor.wordWrap": "on",
+          "editor.linkedEditing": true,
+          "editor.renderWhitespace": "selection",
+          "editor.renderControlCharacters": true,
+          "editor.rulers": [
+            79,
+            118
+          ],
+          "editor.guides.highlightActiveIndentation": true,
+          "editor.guides.highlightActiveBracketPair": true,
+          "editor.bracketPairColorization.enabled": true,
+          "editor.guides.bracketPairs": "active",
+          "files.trimTrailingWhitespace": true,
+          "files.trimFinalNewlines": true,
+          "files.insertFinalNewline": true,
+          "shellcheck.enable": true,
+          "shellcheck.enableQuickFix": true,
+          "shellcheck.ignoreFileSchemes": [
+            "git",
+            "gitfs",
+            "output",
+            "test"
+          ],
+          "[jsonc]": {
+            "editor.defaultFormatter": "vscode.json-language-features"
+          }
+    },
+    "extensions": [
+        "coenraads.bracket-pair-colorizer-2",
+        "eamodio.gitlens",
+        "github.vscode-pull-request-github",
+        "ms-azuretools.vscode-docker",
+        "ms-vsliveshare.vsliveshare",
+        "vscode-icons-team.vscode-icons",
+        "visualstudioexptteam.vscodeintellicode",
+        "ms-vscode.go"
+    ]
+    }
+  }
+}
