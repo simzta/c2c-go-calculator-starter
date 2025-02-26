@@ -14,6 +14,10 @@ func multi(a int, b int) int {
 	return a * b
 }
 
+func div(a int, b int) int{
+	return a / b
+}
+
 //1- create a division function (div) with 2 integer parameters and a float return
 
 func goCal(firstNum int, secondNum int) {
@@ -28,19 +32,27 @@ func goCal(firstNum int, secondNum int) {
 	}
 }
 
-// func main() {
-// 	var firstNum int
-// 	var secondNum int
-// 	var name string
+func main() {
+ 	var firstNum int
+ 	var secondNum int
+ 	var name string
 
-// 	fmt.Print("\nHello, What's your name? ")
-// 	fmt.Scanf("%s", &name)
-// 	fmt.Printf("\nWelcome, %s! Let's do some basic calculations.\n\n", name)
+ 	fmt.Print("\nHello, What's your name? ")
+ 	fmt.Scanf("%s", &name)
+ 	fmt.Printf("\nWelcome, %s! Let's do some basic calculations.\n\n", name)
 
-// 	fmt.Print("Enter the first number: ")
-// 	fmt.Scanf("%d", &firstNum)
+ 	fmt.Print("Enter the first number: ")
+ 	fmt.Scanf("%d", &firstNum)
 
-// 	//2- ask the user to enter the second number and store the value in "secondNum"
+	fmt.Print("Enter the second number: ")
+	fmt.Scanf("%d", &secondNum)
 
-// 	//3- Call the "GoCal" function with the proper parameters
-// }
+
+	goCal(firstNum, secondNum)
+
+
+
+ //	2- ask the user to enter the second number and store the value in "secondNum"
+
+ //	3- Call the "GoCal" function with the proper parameters
+ }
