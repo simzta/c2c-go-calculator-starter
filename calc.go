@@ -28,19 +28,19 @@ func goCal(firstNum int, secondNum int) {
 	}
 }
 
-func main() {
-	var firstNum int
-	var secondNum int
-	var name string
+// func main() {
+// 	var firstNum int
+// 	var secondNum int
+// 	var name string
 
-	fmt.Print("\nHello, What's your name? ")
-	fmt.Scanf("%s", &name)
-	fmt.Printf("\nWelcome, %s! Let's do some basic calculations.\n\n", name)
+// 	fmt.Print("\nHello, What's your name? ")
+// 	fmt.Scanf("%s", &name)
+// 	fmt.Printf("\nWelcome, %s! Let's do some basic calculations.\n\n", name)
 
-	fmt.Print("Enter the first number: ")
-	fmt.Scanf("%d", &firstNum)
+// 	fmt.Print("Enter the first number: ")
+// 	fmt.Scanf("%d", &firstNum)
 
-	//2- ask the user to enter the second number and store the value in "secondNum"
+// 	//2- ask the user to enter the second number and store the value in "secondNum"
 
-	//3- Call the "GoCal" function with the proper parameters
-}
+// 	//3- Call the "GoCal" function with the proper parameters
+// }
