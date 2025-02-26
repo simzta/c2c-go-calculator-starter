@@ -1,46 +1,56 @@
+//Defining main package
 package main
 
+//import fmt
 import "fmt"
 
-func plus(a int, b int) int {
-	return a + b
+//variables
+var schoolYear = 3   //int
+
+//structure
+type Student struct{
+  name string;
+  major string;
+  GPA float32;
+  GradStatus bool;
+  numClasses int
+  class string
+  }
+
+//function
+func classification(schoolYear int) string{
+  switch schoolYear{   //switch
+    case 1:
+      return "Freshman"
+    case 2:
+      return "Sophomore"
+    case 3:
+      return "Junior"
+    case 4:
+      return "Senior"
+    default:
+      return "Not an valid year."
+  }
 }
 
-func minus(a int, b int) int {
-	return a - b
-}
+//main function
+func main(){
 
-func multi(a int, b int) int {
-	return a * b
-}
+  var  student1 Student
+  student1.name ="Felicia Forester"
+  student1.major = "CS Engineering"
+  student1.numClasses = 5
+  student1.GPA = 4.00
+  student1.GradStatus = false
+  student1.class = classification(4)
 
-//1- create a division function (div) with 2 integer parameters and a float return
+  if student1.class == "Senior"{
+    fmt.Println(student1)
+    fmt.Println("Congrats!")
 
-func goCal(firstNum int, secondNum int) {
-	fmt.Println(firstNum, "+", secondNum, "=", plus(firstNum, secondNum))
-	fmt.Println(firstNum, "-", secondNum, "=", minus(firstNum, secondNum))
-	fmt.Println(firstNum, "*", secondNum, "=", multi(firstNum, secondNum))
+  } else {
+    fmt.Println(student1)
 
-	if secondNum == 0 {
-		fmt.Println("not divisible by zero.")
-	} else {
-		fmt.Println(firstNum, "/", secondNum, "=", div(firstNum, secondNum))
-	}
-}
+  }
 
-func main() {
-	var firstNum int
-	var secondNum int
-	var name string
-
-	fmt.Print("\nHello, What's your name? ")
-	fmt.Scanf("%s", &name)
-	fmt.Printf("\nWelcome, %s! Let's do some basic calculations.\n\n", name)
-
-	fmt.Print("Enter the first number: ")
-	fmt.Scanf("%d", &firstNum)
-
-	//2- ask the user to enter the second number and store the value in "secondNum"
-
-	//3- Call the "GoCal" function with the proper parameters
 }
