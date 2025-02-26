@@ -20,7 +20,7 @@ To use this project, follow these steps:
    - Open a terminal in the Codespace and run the following command:
 
      ```bash
-     go run hello.go
+     go run main.go
      ```
 
    - Alternatively, open the `hello.go` file in the editor and click the play button at the top-right corner.
